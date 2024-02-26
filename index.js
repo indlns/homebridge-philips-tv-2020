@@ -23,7 +23,7 @@ class PhilipsTelevisionPlugin {
         const tvName = this.config.name;
         const tvIP = this.config.ip;
         const mac_address = this.config.mac_address;
-        const baseURL = "http://" + tvIP + ":1925/6/";
+        const baseURL = "https://" + tvIP + ":1926/6/";
         const ambilightStyles = this.config.ambilight_styles || [];
         const ambiHue = this.config.ambihue || false;
 
