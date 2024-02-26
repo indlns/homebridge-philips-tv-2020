@@ -27,7 +27,7 @@ While you are in the remote menu, you can use the volume buttons of your device 
 This plugin is not published on npm. To install it from GitHub, make sure you have git installed and run:
 
 ```shell
-npm install -g git+https://github.com/larsjuhw/homebridge-philips-tv-2020.git
+npm install -g git+https://github.com/ineedaliens/homebridge-philips-tv-2020.git
 ```
 
 ### Adding the accessory to HomeKit
