@@ -291,7 +291,7 @@ class PhilipsTelevisionPlugin {
         }
 
         this.getAmbiHue = function (callback) {
-            this.get("HueLamp/power", (result) => {
+            this.get("ambilight/power", (result) => {
                 const response = JSON.parse(result);
                 const power = response.power == "On" ? 1 : 0;
                 callback(power)
