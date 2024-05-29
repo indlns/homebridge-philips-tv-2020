@@ -286,8 +286,8 @@ class PhilipsTelevisionPlugin {
             var body = {
                 "power": power
             }
-            that.post("HueLamp/power", body);
-            that.log.info("Set ambihue to " + power);
+            that.post("ambilight/power", body);
+            that.log.info("Set ambilight to " + power);
         }
 
         this.getAmbiHue = function (callback) {
