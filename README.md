@@ -1,8 +1,8 @@
-# Homebridge-philips-tv-2020
+# Homebridge-philips-tv-50PUS8108/60
 
 A Homebridge plugin to control your Philips TV. Made for the 43PUS7805 2020 model, but it should work for most non-Android TV version 6 API TVs.
 
-Uses API version 6 and port 1925.
+Uses API version 6 and port 1926.
 
 ## Features
 
