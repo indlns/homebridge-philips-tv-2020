@@ -237,6 +237,30 @@ class PhilipsTelevisionPlugin {
                 callback(null, mute);
             });
 
+        // // Add a characteristic for volume control via slider
+        
+        speakerService.addCharacteristic(this.Characteristic.Volume)
+            .on('set', (newValue, callback) => {
+                this.log.debug('set Volume => setNewValue: ' + newValue);
+                var body = {
+                    "current": newValue
+                };
+                this.post("audio/volume", body);
+                callback(null);
+            })
+            .on('get', (callback) => {
+                that.get("audio/volume", (result) => {
+                    if (result == false) {
+                        callback(null, 0);
+                    } else {
+                        var response = JSON.parse(result);
+                        callback(null, response.current);
+                  }
+                });
+            });
+
+///
+        
         /**
          * Create TV Input Source Services to use as ambilight styles
          * These are the inputs the user can select from.
