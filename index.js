@@ -183,7 +183,7 @@ class PhilipsTelevisionPlugin {
                     }
                     case this.Characteristic.RemoteKey.INFORMATION: {
                         this.log.debug('set Remote Key Pressed: INFORMATION');
-                        this.remoteButton("Home");
+                        this.remoteButton("Source");
                         break;
                     }
                 }
