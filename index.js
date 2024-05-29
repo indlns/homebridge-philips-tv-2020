@@ -92,7 +92,7 @@ class PhilipsTelevisionPlugin {
             });
 
         // Set default source (ambilight style) identifier to 1
-        tvService.updateCharacteristic(this.Characteristic.ActiveIdentifier, 1);
+        tvService.updateCharacteristic(this.Characteristic.ActiveIdentifier, 3);
 
         // Handle source (ambilight style) changes
         tvService.getCharacteristic(this.Characteristic.ActiveIdentifier)
