@@ -26,11 +26,8 @@ class PhilipsTelevisionPlugin {
         const baseURL = "https://" + tvIP + ":1926/6/";
         const ambilightStyles = this.config.ambilight_styles || [];
         const ambiHue = this.config.ambihue || false;
-        const inputSources = this.config.input_sources || []; // Добавлено для источников сигнала
 
         this.log.info("Found " + ambilightStyles.length + " ambilight styles");
-        this.log.info("Found " + inputSources.length + " input sources"); // Логирование источников сигнала
-
 
         // Generate a UUID
         const uuid = this.api.hap.uuid.generate('homebridge:my-tv-plugin' + tvName);
@@ -282,17 +279,6 @@ class PhilipsTelevisionPlugin {
 
             tvService.addLinkedService(ambilightStyleService);
         });
-
-           // Добавление источников сигнала
-    inputSources.forEach((source) => {
-        const inputSourceService = this.tvAccessory.addService(this.Service.InputSource, source.value, source.name);
-        inputSourceService
-            .setCharacteristic(this.Characteristic.Identifier, ++identifier)
-            .setCharacteristic(this.Characteristic.ConfiguredName, source.name)
-            .setCharacteristic(this.Characteristic.IsConfigured, this.Characteristic.IsConfigured.CONFIGURED)
-            .setCharacteristic(this.Characteristic.InputSourceType, this.Characteristic.InputSourceType.HDMI); // можно изменить на другой тип входа при необходимости
-        tvService.addLinkedService(inputSourceService);
-    });
 
         // Publish as external accessory as only one TV can be registered per bridge.
         
