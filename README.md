@@ -6,7 +6,7 @@
 
 # Homebridge-philips-tv-50PUS8108/60
 
-A Homebridge plugin to control your Philips TV. Made for the 43PUS7805 2020 model, but it should work for most non-Android TV version 6 API TVs.
+A Homebridge plugin to control your Philips TV. Made for the 50PUS8108/60 model, but it should work for most non-Android TV version 6 API TVs.
 
 Uses API version 6 and port 1926.
 
@@ -33,7 +33,7 @@ While you are in the remote menu, you can use the volume buttons of your device 
 This plugin is not published on npm. To install it from GitHub, make sure you have git installed and run:
 
 ```shell
-npm install -g git+https://github.com/ineedaliens/homebridge-philips-tv-2020.git
+npm install -g git+https://github.com/indlns/homebridge-philips-tv-2020.git
 ```
 
 ### Adding the accessory to HomeKit
